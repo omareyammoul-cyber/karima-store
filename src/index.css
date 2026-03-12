@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #B38B59;
+  --color-secondary: #EFE7DA;
+  --color-background-light: #F7F3EE;
+  --color-background-dark: #2A2522;
+  --color-helper: #5E6B57;
+  --color-luxury-text: #2A2522;
+}
+
+@layer base {
+  body {
+    @apply bg-background-light text-luxury-text font-sans;
+    direction: rtl;
+  }
+}
+
+.moroccan-pattern {
+  background-image: radial-gradient(circle at 2px 2px, rgba(179, 139, 89, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
