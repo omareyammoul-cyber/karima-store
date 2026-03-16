@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap');
 
 @theme {
-  --font-sans: "Tajawal", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", "Noto Sans Arabic", sans-serif;
   
-  --color-primary: #B38B59;
-  --color-secondary: #EFE7DA;
-  --color-background-light: #F7F3EE;
-  --color-background-dark: #2A2522;
-  --color-helper: #5E6B57;
-  --color-luxury-text: #2A2522;
+  --color-primary: #c59f59;
+  --color-primary-foreground: #ffffff;
+  --color-background: #f8f7f6;
+  --color-foreground: #1e1a14;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
 }
 
 @layer base {
   body {
-    @apply bg-background-light text-luxury-text font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
     direction: rtl;
   }
-}
-
-.moroccan-pattern {
-  background-image: radial-gradient(circle at 2px 2px, rgba(179, 139, 89, 0.05) 1px, transparent 0);
-  background-size: 24px 24px;
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
 }
 
 .no-scrollbar::-webkit-scrollbar {
